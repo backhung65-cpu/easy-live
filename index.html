@@ -45,6 +45,11 @@
   .num { font-weight: 900; color: var(--red); font-size: 15px; letter-spacing: .08em; margin-bottom: 10px; }
   .shot { border-radius: 16px; overflow: hidden; box-shadow: 0 24px 60px rgba(21,23,28,.22); background: #000; }
   .shot.phone { max-width: 300px; margin: 0 auto; border-radius: 40px; border: 10px solid #0b0c10; }
+  .extras { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; list-style: none; padding: 0; margin: 6px 0 0; }
+  .extras li { background: var(--paper); border-radius: 18px; padding: 24px 22px; }
+  .extras b { display: block; font-size: 22px; letter-spacing: -0.03em; margin-bottom: 6px; font-weight: 900; }
+  .extras span { color: var(--dim); font-size: 16px; }
+  @media (max-width: 860px) { .extras { grid-template-columns: 1fr; } }
   .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; counter-reset: s; padding: 0; margin: 0; list-style: none; }
   .steps li { background: var(--paper); border-radius: 18px; padding: 24px 22px; counter-increment: s; }
   .steps li::before { content: counter(s); display: flex; width: 40px; height: 40px; border-radius: 50%; background: var(--ink); color: var(--cream); align-items: center; justify-content: center; font-weight: 900; margin-bottom: 14px; }
@@ -121,6 +126,14 @@
         <div><div class="num">04</div><h3>리모컨도 핸드폰으로</h3><p>자리에서 일어나지 않고 핸드폰으로 장면을 바꾸고 자막을 띄웁니다. 켤 때마다 장면을 스스로 백업하고, 지운 것은 되돌릴 수 있습니다.</p></div>
         <div class="shot phone"><img src="img/phone_remote.jpg" alt="핸드폰 리모컨 화면" loading="lazy"></div>
       </div>
+      <div class="feature" style="display:block">
+        <div class="num">05 · 새로 들어왔습니다</div>
+        <ul class="extras">
+          <li><b>예배 시작 카운트다운</b><span>시작 시각만 정하면 대기 화면에 남은 시간이 나옵니다.</span></li>
+          <li><b>설교자 이름 자막</b><span>이름과 직함을 화면 아래에 띄웁니다. 10초 뒤 스스로 꺼지게 할 수 있습니다.</span></li>
+          <li><b>설교자 화면 (프롬프터)</b><span>강단의 태블릿이나 핸드폰에 시계, 지금 자막, 다음 슬라이드, 보낸 말을 크게 보여 줍니다.</span></li>
+        </ul>
+      </div>
     </section>
 
     <section id="how">
@@ -146,7 +159,7 @@
         <div class="card" data-os="mac">
           <h3>맥 · 애플 칩 <span class="tag">시험판</span></h3>
           <p>M1 이후의 맥. 크롬이 필요합니다.</p>
-          <a class="btn" href="https://github.com/backhung65-cpu/easy-live/releases/latest/download/EasyLive-Mac-AppleSilicon.tar.gz">내려받기 · 58MB</a>
+          <a class="btn" href="https://github.com/backhung65-cpu/easy-live/releases/latest/download/EasyLive-Mac-AppleSilicon.tar.gz">내려받기 · 59MB</a>
         </div>
         <div class="card" data-os="mac">
           <h3>맥 · 인텔 <span class="tag">시험판</span></h3>
